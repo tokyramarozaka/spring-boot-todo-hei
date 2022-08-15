@@ -32,4 +32,9 @@ public class PostController {
     public List<Post> savePosts(@RequestBody List<Post> posts){
         return postService.saveAll(posts);
     }
+
+    @GetMapping("/users/{userId}/posts")
+    public List<Post> getUserPosts(@PathVariable Long userId){
+        return postService.getPostsByUserId(userId);
+    }
 }

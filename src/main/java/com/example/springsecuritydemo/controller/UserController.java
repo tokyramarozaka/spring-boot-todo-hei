@@ -34,10 +34,7 @@ public class UserController {
         return userService.getById(userId);
     }
 
-    @GetMapping("/users/{userId}/posts")
-    public List<Post> getUserPosts(@PathVariable Long userId){
-        return postService.getPostsByUserId(userId);
-    }
+
 
     @PostMapping("/users")
     public List<User> saveUsers(@RequestBody List<User> users){
